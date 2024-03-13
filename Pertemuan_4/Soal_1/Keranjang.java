@@ -3,6 +3,10 @@ import java.util.ArrayList;
 public class Keranjang {
     ArrayList<Barang> krjg;
 
+    Keranjang() {
+        krjg = new ArrayList<Barang>();
+    }
+
     int totalBarang = 0;
     int totalHaraga = 0;
     void tambahBarang(Barang arg) {
