@@ -21,6 +21,8 @@ public class Keranjang {
         }
     }
 
+
+
     void printHasil() {
         System.out.println("Jumlah Barang Di Keranjang Saat Ini : " + totalBarang);
         System.out.println("Barang Pada Keranjang:");
@@ -31,3 +33,4 @@ public class Keranjang {
         System.out.println("Total Harga Yang Harus di Bayar : " + totalHaraga);
     }
 }
+

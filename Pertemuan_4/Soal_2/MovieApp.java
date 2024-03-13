@@ -37,7 +37,7 @@ public class MovieApp {
     }
 
     void bookFilm(Film arg, int numberOfTickets) {
-        if (numberOfTickets < arg.availableSeats ) {
+        if (numberOfTickets <= arg.availableSeats ) {
             System.out.println("Pesanan berhasil dengan detail pesanan:");
             System.out.println("Film: " + arg.title);
             System.out.println("Jumlah Tiket: " + numberOfTickets);

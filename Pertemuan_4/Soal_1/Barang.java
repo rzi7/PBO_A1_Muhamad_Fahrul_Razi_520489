@@ -8,3 +8,4 @@ public class Barang {
         this.jumlahBarang = jumlahBarang;
     }
 }
+
