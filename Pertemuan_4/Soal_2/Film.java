@@ -1,6 +1,6 @@
 public class Film {
     String title, genre;
-    int duration, availableSeats;
+    int duration, availableSeats, id, ticket;
 
     Film(String title, String genre, int duration, int availableSeats) {
         this.title = title;

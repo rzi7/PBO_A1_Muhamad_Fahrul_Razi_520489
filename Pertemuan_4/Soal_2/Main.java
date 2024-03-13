@@ -26,6 +26,8 @@ public class Main {
         System.out.print("Masukkan id pesanan yang ingin dicari: ");
         int id = scan.nextInt();
         movieApp.searchBooking(id);
+
+        scan.close();
     }
 
 }

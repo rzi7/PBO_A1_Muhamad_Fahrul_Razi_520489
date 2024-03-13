@@ -48,7 +48,10 @@ public class MovieApp {
                 }
             }
             System.out.println("Booking ID: " + id);
+            arg.id = id;
+            arg.ticket = numberOfTickets;
             listId.add(id);
+            arg.availableSeats -= numberOfTickets;
         } else {
             System.out.println("Pesanan tidak dapat diproses. Kursi tidak tersedia.");
             this.displayAllFilms();
@@ -64,7 +67,15 @@ public class MovieApp {
             }
         }
         if (availableID) {
-            System.out.println("Pesanan Ditemukan");
+            for (Film film : this.listFilm) {
+                if (film.id == bookid) {
+                    System.out.println("Pesanan Ditemukan: ");
+                    System.out.println("Film: " + film.title);
+                    System.out.println("Jumlah Tiket Yang Dipesan: " + film.ticket);
+                }
+
+            }
+
         } else {
             System.out.println("Pesanan Tidak Ditemukan");
         }
