@@ -1,4 +1,3 @@
-
 public class Player extends Entity {
     private String name;
     private int serangMerchant = 0;
@@ -18,11 +17,12 @@ public class Player extends Entity {
         if (entity instanceof Merchant) {
             if (getHp() > 0) {
                 if (serangMerchant <= 1) {
-                    System.out.println("Merchan : heyy heyy, ngapain nyerang");
+                    System.out.println("Merchant : heyy heyy, ngapain nyerang");
                     serangMerchant++;
                 } else if(serangMerchant > 1 && serangMerchant < 3) {
-                    System.out.println("Merchan : apaanlu");
-                    System.out.println("Merchan : AUAH MALES JUALAN");
+                    System.out.println("Merchant : apaanlu");
+                    System.out.println("Merchant : AUAH MALES JUALAN");
+                    serangMerchant++;
                 } else {
                     System.out.println("Merchan : ..............");
                 }
@@ -45,11 +45,16 @@ public class Player extends Entity {
     }
     
     protected void interact(Merchant entity) {
-        if (serangMerchant > 1) {
-            System.out.println("Merchant : auahhh malesss");
-            System.out.println("# TIDAK BISA BELI, MERCHANT NGAMBEK");
+        if (entity.getHp() > 0) {
+            if (serangMerchant > 1) {
+                System.out.println("Merchant : auahhh malesss");
+                System.out.println("# TIDAK BISA BELI, MERCHANT NGAMBEK");
+            } else {
+                entity.interact(this);
+            }
         } else {
-            entity.interact(this);
+            System.out.println("# MERCHANT SUDAH HANCUR");
         }
     }
+            
 }
