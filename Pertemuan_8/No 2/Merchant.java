@@ -13,10 +13,6 @@ public class Merchant extends Entity {
         System.out.println("# MERCHANT DENGAN LEVEL : " + getLvl());
     }
 
-    public ArrayList<String> getList_item() {
-        return new ArrayList<>(this.list_item);
-    }
-
     protected void interact(Entity entity) {
         System.out.println("Merchant : ");
         System.out.println("Barang yang tersedia hari ini");
